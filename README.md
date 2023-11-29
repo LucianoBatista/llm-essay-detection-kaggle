@@ -1,3 +1,5 @@
+![img](./docs/imgs/img-kcRrzyfk7Kb7ytPUiGYbyeiZ.png)
+
 # LLM - Detect AI Generated Text
 
 This is kaggle competition to classify texto into AI generated or as a human write.
