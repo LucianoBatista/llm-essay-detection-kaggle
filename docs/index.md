@@ -39,4 +39,4 @@ There is a huge number of available generated text from kaggle, I'll try to use 
 
 Please [check this notebook if you want to use too](https://www.kaggle.com/code/pranshubahadur/detect-llm-generated-essays-using-retention/input).
 
-![img](external-datasets.png)
+![img](./imgs/external-datasets.png)
