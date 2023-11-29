@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = "*"
+torchtext = "*"
+transformers = "*"
+polars = "*"
+pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+seaborn = "*"
+jupyterlab = "*"
+jupyter-black = "*"
+catppuccin-jupyterlab = "*"
+jupyterlab-vim = "*"
+mkdocs-material = "*"
+mkdocs-mermaid2-plugin = "*"
+fontawesome-markdown = "*"
+numpy = "*"
+pyarrow = "*"
+dvc = "*"
+lxml = "*"
+streamlit = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
