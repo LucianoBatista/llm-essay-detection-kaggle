@@ -43,6 +43,7 @@ plugins:
 nav:
   - Overview: "index.md"
   - Experiments: "experiment.md"
+  - External Souces: "external_sources.md"
   
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
