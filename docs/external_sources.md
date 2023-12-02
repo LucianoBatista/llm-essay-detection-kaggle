@@ -43,4 +43,22 @@ I'm using just the AI generated part of the dataset. This dataset also has a col
 
 - [Dataset](https://www.kaggle.com/datasets/alejopaullier/daigt-external-dataset/)
 
-# ...
+# DAIGT Data | Llama 70b and Falcon 180b
+
+8K of generated essays each from Llama 70b and Falcon 180b.
+
+There is different csvs, and the prompts were from the PERSUADE database and from GPT-4.
+
+- [Dataset](https://www.kaggle.com/datasets/nbroad/daigt-data-llama-70b-and-falcon180b/)
+
+# LLM-generated essay using PaLM from Google Gen-AI
+
+This database is simple, but I think that is interesting to use, because is using those `prompt_id`s from the original training dataset of the competition.
+
+One downside is that the prompt id can be limited to training dataset. As the competition says that we have 7 prompts in total, add some others prompts to the training data can be interesting.
+
+- [Dataset](https://www.kaggle.com/datasets/kingki19/llm-generated-essay-using-palm-from-google-gen-ai/)
+
+# Important
+
+**Search if there is human written essays using some of the 7 PERSUADE prompts!**
