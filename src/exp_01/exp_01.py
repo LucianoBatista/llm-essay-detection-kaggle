@@ -112,7 +112,7 @@ def concat_data(config: Config, kaggle_repo: KaggleRepos):
         )
     )
 
-    # id, prompt_id, text, generated, model
+    ## id, prompt_id, text, generated, model
     aug_5 = pl.read_csv(config.augmented_data_5_path)
     unique_ids_5 = [str(uuid.uuid4()) for _ in range(len(aug_5))]
     aug_5 = (
