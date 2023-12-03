@@ -1,7 +1,8 @@
-from enum import Enum, auto
 import uuid
-import polars as pl
 from dataclasses import dataclass
+from enum import Enum, auto
+
+import polars as pl
 
 
 @dataclass
@@ -39,7 +40,7 @@ class KaggleRepos(Enum):
 
 
 def concat_data(config: Config, kaggle_repo: KaggleRepos):
-    # id, prompt_id, text, generated, model
+    ## id, prompt_id, text, generated, model
     aug_1 = (
         pl.read_csv(config.augmented_data_1_path)
         .with_columns(
