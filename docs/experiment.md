@@ -52,3 +52,34 @@ Some param that I used:
 - base model: 768 dimensions
 - pretrained tokenizer: sentece-piece
 - data: from the competition + external data of AI generated (I did not used others human written text)
+
+# Exp 03
+
+As I mentioned before, the best performances are comming from a Kaggle Grandmaster that published a very good idea of use of a tuning of the tokenizer + tfidf strategies + traditional classifiers. So I had to experiment that.
+
+As this start I'm not just copying others solutions, and I'm using the time to learn new strategies and the what of some techniques are working and others not.
+
+This run was very direct, and I basically created a simple pipeline with the tfidf vectorizer and a MultinomialNB model, and run it on a database. This time I used more data during the experiment, as you can see from `src/exp_03/exp_03.py`, look how simple was the pipe:
+
+```python
+pipeline = Pipeline(
+    [
+        ("tfidf", TfidfVectorizer(max_features=4500)),
+        ("clf", MultinomialNB()),
+    ]
+)
+```
+
+The performance was almost 0.7, where I believe that the max feature param help the model to not overfit.
+
+# Exp 04
+
+This is an extension of the experiment 03, where I did some tuning on a tokenizer. I used [this link](https://huggingface.co/learn/nlp-course/chapter6/2?fw=pt) to understand how to tuning a tokenizer, I did not used a training from scratch, supposing that this could work better.
+
+Here we need to do some heavy work to load some files to public datasets in order to use the notebook without internet connection for the submission.
+
+I did some improviment on the public leaderboard, but did not came to the top as my score was 0.795.
+
+This shows that this approach really has some benefits.
+
+I also did some small changes on this experiment, on data, tfidf params, MultinomialNB params, but nothing result in a score higher than 0.795 for this run.

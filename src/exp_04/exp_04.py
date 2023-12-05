@@ -2,10 +2,9 @@ from dataclasses import dataclass
 
 import polars as pl
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
 from tqdm.auto import tqdm
 from transformers import AutoTokenizer
 
@@ -15,9 +14,9 @@ if KAGGLE:
 
     @dataclass
     class Config:
-        data_external_path: str = "../input/external/concatenated.csv"
-        data_train_path: str = "../input/train_essays.csv"
-        data_test_path: str = "../input/test_essays.csv"
+        data_external_path: str = "../input/daigt-one-place-all-data/concatenated.csv"
+        data_train_path: str = "../input/llm-detect-ai-generated-text/train_essays.csv"
+        data_test_path: str = "../input/llm-detect-ai-generated-text/test_essays.csv"
 
 else:
 
@@ -86,6 +85,8 @@ class Exp04:
         self.X_test = X_test
         self.y_train = y_train
         self.y_test = y_test
+        # adjust tokenizer path to change base on wich environent we are
+        # kaggle or local
         self.tokenizer = AutoTokenizer.from_pretrained("models/tokenizer")
         self.tfidf = None
         self.clf = None

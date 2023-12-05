@@ -9,13 +9,14 @@ from sklearn.pipeline import Pipeline
 
 KAGGLE = False
 
+
 if KAGGLE:
 
     @dataclass
     class Config:
-        data_external_path: str = "../input/external/concatenated.csv"
-        data_train_path: str = "../input/train_essays.csv"
-        data_test_path: str = "../input/test_essays.csv"
+        data_external_path: str = "../input/daigt-one-place-all-data/concatenated.csv"
+        data_train_path: str = "../input/llm-detect-ai-generated-text/train_essays.csv"
+        data_test_path: str = "../input/llm-detect-ai-generated-text/test_essays.csv"
 
 else:
 
