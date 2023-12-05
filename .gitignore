@@ -4,3 +4,4 @@ data
 models
 docs/hidden_ideas.md
 .ipynb_checkpoints
+runs/

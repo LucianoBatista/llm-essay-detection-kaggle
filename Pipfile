@@ -25,6 +25,9 @@ dvc = "*"
 lxml = "*"
 streamlit = "*"
 pre-commit = "==3.5.0"
+tensorboard = "==2.15.1"
+datasets = "==2.15.0"
+tokenizers = "==0.15.0"
 
 [dev-packages]
 
